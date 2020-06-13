@@ -26,6 +26,6 @@ value : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwi
 8. Now the JwtrequestFilter intercepts the request and obtains the JWT from the authorization header
 9. Then the extracted JWT is validated with the wtUtil.validateToken(jwt, userDetails) method in the filter
 10. Once validated, the filter chaining continues and the user can access other urls as the JWT is validated
-11. This JWT validation is doe only once per request by the JwtrequestFilter as it extends OncePerRequestFilter
+11. This JWT validation is done only once per request by the JwtrequestFilter as it extends OncePerRequestFilter
 12. The Application is made stateless in the configure(HttpSecurity http) method of SecurityConfiguration class
 13. This will enable the application not to store session id. Instead it is the responsibility of the client to send the signed JWT every time to the server
